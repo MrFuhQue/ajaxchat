@@ -1,0 +1,20 @@
+Ajax/jQuery & PHP Chat - Beta - Version 0.0.3
+-Added: 2 Emoticons - "/like" "/hate"
+-Added: Multiple Administrator Support
+-Updated: Username maxlength to 12 characters
+-Fixed: Using a space " " as a password
+-Disabled: text predictions on all form fields
+-Added: 'core.php' - Stores session variables - configuration file
+
+Ajax/jQuery & PHP Chat - Beta - Version 0.0.2
+-Added: 2 Emoticons - "xD" "/fp"
+-Added: 1 Command - "/color" 
+-Added: User Entrance/Exit Notification
+-Added: Basic Administrative Login
+-Added: User Logins
+-Fixed: Blank Message Submission
+-Updated: 'css/cb_style.css'
+
+Ajax/jQuery & PHP Chat - Beta - Version 0.0.1
+-Added 6 Emoticons: - ":)" ":D" ":P" ":(" "o0" ";)"
+-Added 6 Commands: - "/slap" "/me" "/url" "/bb" "/say" ""/img"
