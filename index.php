@@ -32,7 +32,7 @@ $ver = $_SESSION['ver'];
 	<span id="signInName">User name</span>
 	</form>
 	<form onsubmit="sendMessage();return false" id="messageForm" class="field">
-		<input id="message" type="text" width="10%" autocomplete="off">
+		<input id="message" type="text" width="10%" autocomplete="off" maxlength="100">
 </form>
 
 <div id="box"><center>Emoticons: </center><center><img src="lib/emotes/like" title="/like"> <img src="lib/emotes/smile" title=":)"> <img src="lib/emotes/sad" title=":("> <img src="lib/emotes/fp" title="/fp"> <img src="lib/emotes/grin" title=":D"> <br/> <img src="lib/emotes/hate" title="/hate"> <img src="lib/emotes/wink" title=";)"> <img src="lib/emotes/tongue" title=":P"> <img src="lib/emotes/crazy" title="o0"> <img src="lib/emotes/xD" title="xD"></center></div>
