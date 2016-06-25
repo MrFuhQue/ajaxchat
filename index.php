@@ -23,7 +23,7 @@ $ver = $_SESSION['ver'];
 
 	<div id="chatBox"><center><span style="color:#FF2414"><b>Ajax/jQuery & PHP Chat - Beta - Version: <?php echo $ver; ?></b></span></center><hr></div>
 	<div id="usersOnLineHeader">
-      <center><img src='lib/emotes/user'>Online Users<img src='lib/emotes/user'></center>
+      <center><img src='lib/emotes/user'><b>Online Users</b><img src='lib/emotes/user'></center>
     </div>
 	
 	<div id="usersOnLine"><br /><span style="color:#FF2414"><center>Access Denied</center></span></div>
