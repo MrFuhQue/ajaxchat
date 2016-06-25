@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 include('core.php');
 $adm = $_SESSION['adm'];
@@ -22,10 +21,10 @@ $onlineusers_file=file("src/onlineusers.txt",FILE_IGNORE_NEW_LINES);
 $jroom=file("src/lobby.txt",FILE_IGNORE_NEW_LINES);
 
 if (isset($_POST['user'],$_POST['oper'])){
-$user= '<img src="lib/emotes/user" title="user"><b>'.$_POST['user'].'</b>';
+$user= '<img src="lib/emotes/user" title="guest"><b>'.$_POST['user'].'</b>';
 
 if (in_array($_POST['user'],$adm)) {
-	$user = "<span style='color:red'><img src='lib/emotes/admin'><b>".$_POST['user']."</b></span>";
+	$user = "<span style='color:red'><img src='lib/emotes/admin' title='admin'><b>".$_POST['user']."</b></span>";
 }
 		
 $oper=$_POST['oper'];

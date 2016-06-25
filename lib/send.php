@@ -1,7 +1,4 @@
 <?php
-//start session
-session_start();
-
 //call session vars
 include('core.php');
 
@@ -16,9 +13,9 @@ $bot=$_SESSION['bot'];
 $msg = explode(" ", $message);
 
 //determine account level
-if(in_array($_POST['user'],$adm)){
+if(in_array($user,$adm)){
 	//administrator
-	$user = "<span style='color:red'><b>".$_POST['user']."</b></span>";
+	$user = "<span style='color:red'><b>".$user."</b></span>";
 }else {
 	//guest
 	$user = "<span style='color:#00cc00'><b>".$user."</b></span>"; 
@@ -33,7 +30,6 @@ if($msg[0] == "" || (isset($msg[0]) != true)) {
 }
 
 //emotes
-if(isset($message)){
 	$message = str_replace("/like","<img src='lib/emotes/like'>",$message);
 	$message = str_replace("/hate","<img src='lib/emotes/hate'>",$message);
 	$message = str_replace(":D","<img src='lib/emotes/grin'>",$message);
@@ -44,7 +40,10 @@ if(isset($message)){
 	$message = str_replace(":P","<img src='lib/emotes/tongue'>",$message);
 	$message = str_replace("/fp","<img src='lib/emotes/fp'>",$message);
 	$message = str_replace("xD","<img src='lib/emotes/xD'>",$message);
-}
+    $message = str_replace(">)","<img src='lib/emotes/devilish'>",$message);
+    $message = str_replace("/fu","<img src='lib/emotes/fu'>",$message);
+    $message = str_replace(":'(","<img src='lib/emotes/cry'>",$message);
+    $message = str_replace("/weed","<img src='lib/emotes/weed'>",$message);
 
 //commands
 if($msg[0] == "/slap") {
@@ -82,7 +81,7 @@ if($msg[0] == "/slap") {
 	}elseif ($msg[1] == "color") {
 		$room_file[]=time()."<!@!> - ".$tl." - <b>".$bot."</b>: <span style='color:white'> <b>SYNTAX</b>: /color <i>[color] [message]</i> - <b>USAGE:</b><i> to send a colored message</i></span>"; 
 	}elseif ($msg[1] == "say") {
-		$room_file[]=time()."<!@!> - ".$tl." - <b>".$bot."</b>: <span style='color:white'> <b>SYNTAX</b>: /say <i>[message]</i> - <b>USAGE:</b><i> to send a message as 'Slaiborg'</i></span>"; 
+		$room_file[]=time()."<!@!> - ".$tl." - <b>".$bot."</b>: <span style='color:white'> <b>SYNTAX</b>: /say <i>[message]</i> - <b>USAGE:</b><i> to send a message as the chatroom bot</i></span>"; 
 	}elseif ($msg[1] == "me") {
 		$room_file[]=time()."<!@!> - ".$tl." - <b>".$bot."</b>: <span style='color:white'> <b>SYNTAX</b>: /me <i>[message]</i> - <b>USAGE:</b><i> to describe a verb/action</i></span>"; 
 	}elseif ($msg[1] == "img") {
